@@ -1,4 +1,4 @@
-package com.packtpub.learnvaadin.twaattin.twaattin;
+package com.packtpub.learnvaadin.twaattin;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

@@ -1,12 +1,24 @@
-package com.packtpub.learnvaadin.twaattin.twaattin.ui;
+package com.packtpub.learnvaadin.twaattin.ui;
 
+import com.packtpub.learnvaadin.twaattin.presenter.LogoutBehavior;
+import com.vaadin.server.VaadinSession;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
+
+import java.security.Principal;
 
 public class TimelineScreen extends VerticalLayout {
 
 	public TimelineScreen() {
-		setMargin(true);
+		Label label = new Label(VaadinSession.getCurrent()
+				.getAttribute(Principal.class).getName());
+		Button button = new Button("Logout");
+		button.addClickListener(new LogoutBehavior());
+		HorizontalLayout menuBar = new HorizontalLayout(label,
+				button);
+		addComponent(menuBar);
 		fillTweets();
 	}
 

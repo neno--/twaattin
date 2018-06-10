@@ -1,5 +1,6 @@
-package com.packtpub.learnvaadin.twaattin.twaattin.ui;
+package com.packtpub.learnvaadin.twaattin.ui;
 
+import com.packtpub.learnvaadin.twaattin.presenter.LoginBehavior;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.FormLayout;
 import com.vaadin.ui.PasswordField;
@@ -18,5 +19,7 @@ public class LoginScreen extends FormLayout {
 		addComponent(loginField);
 		addComponent(passwordField);
 		addComponent(submitButton);
+
+		submitButton.addClickListener(new LoginBehavior(loginField, passwordField));
 	}
 }

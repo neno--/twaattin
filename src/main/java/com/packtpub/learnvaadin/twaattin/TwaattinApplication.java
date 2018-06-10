@@ -1,4 +1,4 @@
-package com.packtpub.learnvaadin.twaattin.twaattin;
+package com.packtpub.learnvaadin.twaattin;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
